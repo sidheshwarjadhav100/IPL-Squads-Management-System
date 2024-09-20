@@ -1,7 +1,7 @@
 package com.entity;
 
+//POJO CLASS
 public class Player {
-
 	private String name;
 	private int jrcyNo;
 	private String teamName;

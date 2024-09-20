@@ -53,7 +53,7 @@ public class TeamData {
 		Player p31 = new Player("Deepak Hooda", 5, "LSG", 1236, 17, 95);// all
 
 		// true
-		Player p32 = new Player("Rohit Sharma (Captain)", 45, "MI", 4982, 0, 187);// bat
+		Player p32 = new Player("Rohit Sharma ", 45, "MI", 4982, 0, 187);// bat
 		Player p33 = new Player("Suryakumar Yadav", 63, "MI", 2700, 0, 120);// bat
 		Player p34 = new Player("Piyush Chawla", 11, "MI", 550, 157, 170);// ball
 		Player p35 = new Player("Jason Behrendorff", 67, "MI", 00, 60, 40);// ball
