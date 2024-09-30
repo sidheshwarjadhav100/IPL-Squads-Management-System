@@ -1,5 +1,10 @@
 package com.test;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.file.attribute.AclEntry;
 import java.util.Scanner;
 
 import com.dao.TeamData;
@@ -8,10 +13,12 @@ import com.service.Ops;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
+
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
 		int choice;
 
-		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println("All Teams Of IPL-2024");
 			System.out.println("------------------------");
@@ -26,8 +33,9 @@ public class Main {
 			System.out.println("----------------------");
 
 			System.out.println("Enter Player name of above team that you want to see all details");
+			// sc.nextLine();
+			String pname = bf.readLine();
 
-			String pname = sc.nextLine();
 			Ops.getPlayer(pname);
 			System.out.println("________________________________________________");
 
@@ -36,7 +44,7 @@ public class Main {
 			System.out.println("1.see all teams again");
 			System.out.println("2.exit");
 			do {
-				choice = sc.nextInt();
+				choice = Integer.parseInt(bf.readLine());
 
 				// System.out.println();
 				switch (choice) {
@@ -54,7 +62,9 @@ public class Main {
 					// throw new IllegalArgumentException("Unexpected value: " + choice);
 				}
 			} while (choice <= 0 || choice > 2);
+
 		} while (choice == 1);
+
 	}
 
 }

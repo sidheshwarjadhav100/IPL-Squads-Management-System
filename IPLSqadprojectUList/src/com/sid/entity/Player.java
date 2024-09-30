@@ -1,7 +1,9 @@
-package com.entity;
+package com.sid.entity;
 
-//POJO CLASS
 public class Player {
+
+	// POJO CLASS
+
 	private String name;
 	private int jrcyNo;
 	private String teamName;
@@ -10,12 +12,12 @@ public class Player {
 	private int matches;
 
 	// Zero param const
-	public Player() {
+	public Player(Player player) {
 		super();
 
 	}
 
-//parameterized const
+	// parameterized const
 	public Player(String name, int jrcyNo, String teamName, int runs, int wickets, int matches) {
 
 		this.name = name;
@@ -79,21 +81,8 @@ public class Player {
 	// toString()
 	@Override
 	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Player [Name=");
-		builder.append(name);
-		builder.append(", jrcyNo=");
-		builder.append(jrcyNo);
-		builder.append(", Team Name=");
-		builder.append(teamName);
-		builder.append(", Runs=");
-		builder.append(runs);
-		builder.append(", Wickets=");
-		builder.append(wickets);
-		builder.append(", Matches=");
-		builder.append(matches);
-		builder.append("]");
-		return builder.toString();
+		return " Player [Name=" + name + ", Jourcy NO=" + jrcyNo + ", Team Name=" + teamName + ", Runs=" + runs
+				+ ", Wickets=" + wickets + ", Matches=" + matches + "]";
 	}
 
 }
